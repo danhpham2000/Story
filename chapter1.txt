@@ -1,2 +1,26 @@
 It was the best of times.
 I have a better idea for this contribution.
+
+#include <stdio.h>
+
+
+int main(int argc, char **argv) 
+{
+    double width;
+    printf("Enter your width: ");
+    scanf("%lf:", &width);
+    double height;
+    printf("Enter your height: ");
+    scanf("%lf:", &height);
+    
+    double area, perimeter;
+    
+    area = width * height;
+    perimeter = (width + height) * 2;
+    
+    printf("Area: %3.lf\n", area);
+    printf("Perimeter: %3.lf\n", perimeter);
+
+    
+    return 0;
+}
