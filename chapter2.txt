@@ -1,1 +1,45 @@
 It was fun one llama oke beye bye
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main(int argc, char **argv) 
+{
+    
+    time_t t;
+    srand((unsigned) time(&t));
+    int tries = 5;
+    int number = rand() % 21;
+    int guess = 0;
+    
+    
+    while (tries >= 0) {
+        printf("Your tries remains: %d\n\n", tries);
+        printf("Enter your guess number: ");
+        scanf("%d", &guess);
+        
+        if (guess == number) {
+            printf("You are correct!!!\n\n");
+            break;
+        }
+        
+        else if (guess < number) {
+            printf("Your number is too low!\n\n");
+        }
+        
+        else {
+            printf("Your number is too high!\n\n");
+        }
+        
+        tries--;
+        
+    }
+    
+    printf("Ug oh!! You loose!!!!\n");
+    
+    
+    
+    
+    return 0;
+}
