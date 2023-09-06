@@ -1,1 +1,23 @@
 Hello my name is Danh Pham
+
+int calculateLength (const char * string) 
+{
+    const char *lastAddress = string;
+    
+    while (*lastAddress) {
+        ++lastAddress;
+    }
+    
+    return lastAddress - string;
+}
+
+
+int main () 
+{
+    
+    printf("%d ", calculateLength("String Length Test"));
+    printf("%d ", calculateLength(""));
+    printf("%d ", calculateLength("Test"));
+
+
+}
